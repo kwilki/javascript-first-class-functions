@@ -1,7 +1,11 @@
 function receivesAFunction(callback){
-    return function callback(greeting){
-        console.log(`${greeting} mate`)
-    }
+    callback()
 }
 
-console.log(receivesAFunction("HI"))
+function returnsANamedFunction(){
+    return receivesAFunction
+}
+
+function returnsAnAnonymousFunction() {
+    return function(){}
+}
